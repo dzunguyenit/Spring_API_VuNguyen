@@ -43,4 +43,11 @@ public class EmployeeRestController {
 		return employeeService.addEmployee(empForm);
 	}
 
+	@RequestMapping(value = "/employees", method = RequestMethod.PUT, produces = { MediaType.APPLICATION_JSON_VALUE,
+			MediaType.APPLICATION_XML_VALUE })
+	@ResponseBody
+	public Employee updateEmployee(@RequestBody Employee empForm) {
+		return employeeService.updateEmployee(empForm);
+	}
+
 }
