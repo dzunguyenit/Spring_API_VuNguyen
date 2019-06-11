@@ -28,7 +28,7 @@ public class EmployeeRestController {
 		return list;
 	}
 
-	@RequestMapping(value = "/employees{empId}", method = RequestMethod.GET, produces = {
+	@RequestMapping(value = "/employees/{empId}", method = RequestMethod.GET, produces = {
 			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
 	public Employee getEmployee(@PathVariable("empId") Long empId) {
