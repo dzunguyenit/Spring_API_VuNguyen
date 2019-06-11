@@ -29,13 +29,6 @@ public class EmployeeRestController {
 		return list;
 	}
 
-	@RequestMapping(value = "/employees/{empId}", method = RequestMethod.GET, produces = {
-			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
-	@ResponseBody
-	public Employee getEmployee(@PathVariable("empId") Long empId) {
-		return employeeService.getEmployee(empId);
-	}
-
 	@RequestMapping(value = "/employees", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
@@ -43,11 +36,26 @@ public class EmployeeRestController {
 		return employeeService.addEmployee(empForm);
 	}
 
+	@RequestMapping(value = "/employees/{empId}", method = RequestMethod.GET, produces = {
+			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@ResponseBody
+	public Employee getEmployee(@PathVariable("empId") Long empId) {
+		return employeeService.getEmployee(empId);
+	}
+
 	@RequestMapping(value = "/employees", method = RequestMethod.PUT, produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
 	public Employee updateEmployee(@RequestBody Employee empForm) {
 		return employeeService.updateEmployee(empForm);
+	}
+
+	@RequestMapping(value = "/employees/{empId}", method = RequestMethod.DELETE, produces = {
+			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@ResponseBody
+	public String deleteEmployee(@PathVariable("empId") Long empId) {
+		employeeService.deleteEmployee(empId);
+		return "Employee Is Deleted Successfully";
 	}
 
 }

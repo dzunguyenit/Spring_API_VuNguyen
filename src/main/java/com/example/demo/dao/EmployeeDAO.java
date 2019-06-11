@@ -21,12 +21,19 @@ public class EmployeeDAO {
 	}
 
 	private static void initEmps() {
-		Employee emp1 = new Employee(1L, "E01", "Test 1");
-		Employee emp2 = new Employee(2L, "E02", "Test 2");
-		Employee emp3 = new Employee(3L, "E03", "Test 3");
-		empMap.put(emp1.getEmpId(), emp1);
-		empMap.put(emp2.getEmpId(), emp2);
-		empMap.put(emp3.getEmpId(), emp3);
+
+		Employee employee1 = new Employee(1L, "Employee 1", "Xuân Nguyễn");
+		Employee employee2 = new Employee(2L, "Employee 2", "My Nguyễn");
+		Employee employee3 = new Employee(3L, "Employee 3", "Mai Nguyễn");
+		Employee employee4 = new Employee(4L, "Employee 4", "Trí Nguyễn");
+		Employee employee5 = new Employee(5L, "Employee 5", "Vũ Nguyễn");
+		Employee employee6 = new Employee(6L, "Employee 6", "Như Nguyễn");
+		empMap.put(employee1.getEmpId(), employee1);
+		empMap.put(employee2.getEmpId(), employee2);
+		empMap.put(employee3.getEmpId(), employee3);
+		empMap.put(employee4.getEmpId(), employee4);
+		empMap.put(employee5.getEmpId(), employee5);
+		empMap.put(employee6.getEmpId(), employee6);
 	}
 
 	public Long getMaxEmpId() {
