@@ -22,8 +22,8 @@ public class EmployeeDAO {
 
 	private static void initEmps() {
 		Employee emp1 = new Employee(1L, "E01", "Test 1");
-		Employee emp2 = new Employee(1L, "E02", "Test 2");
-		Employee emp3 = new Employee(1L, "E03", "Test 3");
+		Employee emp2 = new Employee(2L, "E02", "Test 2");
+		Employee emp3 = new Employee(3L, "E03", "Test 3");
 		empMap.put(emp1.getEmpId(), emp1);
 		empMap.put(emp2.getEmpId(), emp2);
 		empMap.put(emp3.getEmpId(), emp3);
